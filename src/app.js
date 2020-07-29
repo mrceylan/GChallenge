@@ -20,8 +20,8 @@ app.post('/filter', filterEndpointHandler);
 /**
  * app starts listen on port
  */
-app.listen(process.env.LISTEN_PORT, ()=>{
-    logger.info('Server started on port ' + process.env.LISTEN_PORT);
+app.listen(process.env.PORT, ()=>{
+    logger.info('Server started on port ' + process.env.PORT);
 });
 
 module.exports = app;
