@@ -1,0 +1,35 @@
+{
+  "name": "gchallenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start:dev": "nodemon ./src/app.js",
+    "test": "jest --watchAll --runInBand --detectOpenHandles",
+    "start": "node ./src/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jest": "^26.1.0",
+    "joi": "^17.1.1",
+    "mongodb-memory-server": "^6.6.3",
+    "mongoose": "^5.9.26",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
+  },
+  "jest": {
+    "testMatch": [
+      "**/test/**/*.js?(x)"
+    ],
+    "watchPathIgnorePatterns": [
+      "db-handler.js"
+    ],
+    "testEnvironment": "node"
+  }
+}
