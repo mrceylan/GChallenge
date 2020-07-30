@@ -44,12 +44,12 @@ recordSchema.statics.filterData = async function(startDate, endDate, minCount, m
             {
                 "$match": {
                     "createdAt": {
-                        "$gt": startDate,
-                        "$lt": endDate
+                        "$gte": startDate,
+                        "$lte": endDate
                     },
                     "totalCount": {
-                        "$gt": minCount,
-                        "$lt": maxCount
+                        "$gte": minCount,
+                        "$lte": maxCount
                     }
                 },
             }
