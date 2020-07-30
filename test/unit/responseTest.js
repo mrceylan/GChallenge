@@ -27,6 +27,6 @@ describe("response Msg Results", () => {
 describe("response Record Results", () => {
     it("should match record result", () => {
         const records = ["a", "b", "c"];
-        expect(response.generateResponse(response.RESPONSES.VALIDATION_ERROR, null, records).records).toEqual(records);
+        expect(response.generateResponse(response.RESPONSES.SUCCESS, null, records).records).toEqual(records);
     });
 });

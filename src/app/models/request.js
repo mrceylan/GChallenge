@@ -11,6 +11,9 @@ var requestSchema = joi.object().keys({
         case "any.required":
           err.message = "Start date is required";
           break;
+        case "date.base":
+          err.message = "Start date must be a valid date";
+          break;
         default:
           break;
       }
@@ -27,6 +30,9 @@ var requestSchema = joi.object().keys({
         case "any.required":
           err.message = "End date is required";
           break;
+        case "date.base":
+          err.message = "End date must be a valid date";
+          break;
         default:
           break;
       }
@@ -39,6 +45,9 @@ var requestSchema = joi.object().keys({
       switch (err.code) {
         case "any.required":
           err.message = "Min count is required";
+          break;
+        case "number.base":
+          err.message = "Min count must be a valid number";
           break;
         default:
           break;
@@ -55,6 +64,9 @@ var requestSchema = joi.object().keys({
           break;
         case "any.required":
           err.message = "Max count is required";
+          break;
+        case "number.base":
+          err.message = "Max count must be a valid number";
           break;
         default:
           break;
